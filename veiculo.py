@@ -10,7 +10,7 @@ class veiculo(object):
         self.cor = cor
         self.velocidade = velocidade
 
-    def setMarca(self, modelo):
+    def setMarca(self, marca):
         self.marca = marca
 
     def getMarca(self):
@@ -39,5 +39,14 @@ class veiculo(object):
            '\n Marca: ' + str(self.getMarca()) +
            '\n Modelo: ' + str(self.getModelo()) +
            '\n cor: ' + str(self.getCor()) +
-           '\n velociada: ' + str(self.getVelocidade())
+           '\n velociada: ' + str(self.getVelocidade()) +'km/h'
         )
+
+
+    def acelerar(self):
+        if self.velocidade < 200:
+            self.velocidade+=1
+
+    def freia(self):
+        if self.velocidade > 80:
+           self.velocidade -= 1
